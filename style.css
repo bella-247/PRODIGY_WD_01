@@ -5,7 +5,8 @@
 }
 
 :root {
-  font-size: 16px;
+  --primary-gold: #ffc800;
+  --primary-gold-translucent: #ffc80055;
 }
 
 html {
@@ -29,14 +30,15 @@ li {
 header {
   position: sticky;
   top: 0;
-  background-color: #333;
-  padding: 20px;
-  color: white;
 }
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 20px clamp(20px, 5vw, 50px);
+  transition: background-color 300ms;
 }
 header nav #logo a {
   color: white;
@@ -45,7 +47,7 @@ header nav #logo a {
   transition: color 200ms;
 }
 header nav #logo a:hover {
-  color: aqua;
+  color: var(--primary-gold);
 }
 header nav ul {
   width: -moz-fit-content;
@@ -63,9 +65,14 @@ header nav ul li a {
   transition-duration: 150ms;
 }
 header nav ul li a:hover {
-  color: gold;
+  color: var(--primary-gold);
+}
+header nav.scrolled {
+  background-color: rgba(51, 51, 51, 0.8);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
-main {
-  padding: 20px 15px;
+main section {
+  padding: 20px 14px;
 }/*# sourceMappingURL=style.css.map */
