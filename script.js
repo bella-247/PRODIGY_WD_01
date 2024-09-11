@@ -14,12 +14,6 @@ const tabLinks = [...document.querySelectorAll(".tab-links")]
 
 tabLinks.forEach(link => {
     link.addEventListener("click", (e) => {
-        // e.preventDefault();
-        // const linkedElement = document.getElementById(e.currentTarget.getAttribute('href').substring(1));
-        // window.scrollTo({
-        //     top: linkedElement.offsetTop - navBarHeight,
-        //     behavior: "smooth",
-        // });
         // removing the active class of the already activated class
         document.querySelector(".tab-links.active").classList.remove("active")
         e.currentTarget.classList.add('active')
@@ -29,6 +23,22 @@ tabLinks.forEach(link => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// contact page
 
 
 contact_submit_btn = document.querySelector("#contact form button")
